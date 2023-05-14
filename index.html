@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FFCE1A',
+              secondary: '#EAEAEA',
+              'dark-blue': '#0D0842',
+              gray: '#6C6C6C',
+              'dark-gray': '#828282',
+              'light-gray': '#EAEAEA',
+            },
+          },
+          fontFamily: {
+            sans: ['Montserrat'],
+            desc: ["'Nunito Sans'"],
+          },
+          container: {
+            center: true,
+          },
+        },
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container mx-auto px-3 md:px-0 pt-[35px] text-dark-blue">
+      <nav>
+        <ul class="flex justify-between items-center">
+          <div class="flex items-center sm:gap-16 lg:gap-32">
+            <li
+              class="shrink-0 cursor-pointer p-[5px] rounded-md hover:bg-light-gray transition duration-100"
+            >
+              <img src="assets/menu_icon.svg" alt="menu_icon" />
+            </li>
+            <li
+              class="sm:flex gap-4 bg-light-gray py-0.5 px-4 rounded-lg hidden"
+            >
+              <img src="assets/search_icon.svg" alt="search_icon" />
+              <input
+                type="text"
+                class="font-desc bg-transparent p-1 text-dark-gray"
+                placeholder="What are you looking for?"
+              />
+            </li>
+          </div>
+          <div class="flex items-center md:gap-8 gap-4 shrink-0">
+            <div class="flex items-center gap-4">
+              <li class="cursor-pointer">
+                <img src="assets/account_icon.svg" alt="account_icon" />
+              </li>
+              <li class="cursor-pointer">
+                <img src="assets/favorite_icon.svg" alt="account_icon" />
+              </li>
+            </div>
+            <li>
+              <button
+                class="flex gap-3 py-1 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+              >
+                <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                <span>Basket</span>
+              </button>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <section
+        class="grid md:grid-cols-2 items-center grid-cols-1 gap-10 md:gap-16 mt-20"
+      >
+        <div class="">
+          <h1 class="text-dark-blue font=[] text-4xl">
+            New Releases This Week
+          </h1>
+          <div class="mt-8 max-w-[380px] text-sm">
+            It's time to update your reading list with some of the latest and
+            greatest releases in the literary world. From heart-pumping
+            thrillers to captivating memoirs, this week's new releases offer
+            something for everyone
+          </div>
+          <div>
+            <button
+              class="mt-10 py-1 px-12 font-semibold bg-primary text-white rounded-lg text-sm hover:-hue-rotate-15"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div class="relative flex">
+          <div class="z-20 shrink-0 shadow-xl flex">
+            <img
+              class="lg:w-[280px]"
+              src="assets/product_photo2.svg"
+              alt="book-img"
+            />
+          </div>
+          <div
+            class="z-10 absolute lg:translate-x-36 translate-x-28 shrink-0 shadow-xl translate-y-4"
+          >
+            <img
+              class="lg:w-[260px] w-[160px]"
+              src="assets/product_photo5.svg"
+              alt="book-img"
+            />
+          </div>
+          <div
+            class="z-0 absolute lg:translate-x-72 translate-x-48 shrink-0 shadow-xl translate-y-6"
+          >
+            <img
+              class="lg:w-[240px] w-[140px]"
+              src="assets/product_photo1.svg"
+              alt="book-img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="mt-[76px]">
+        <h3 class="text-xl txt">Top Sellers</h3>
+        <select class="bg-light-gray py-2 px-4 rounded-lg mt-2.5">
+          <option value="">Choose a genre</option>
+        </select>
+        <div class="mt-5 overflow-scroll flex flex-row gap-10">
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo1.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">The Time Has Come</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                Lindbergh's Pharmacy is an Athens, Georgia, institution...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 27.89</span>
+                  <span class="line-through text-gray">$ 30.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo2.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">I Want a Better Catastrophe...</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                With global warming projected to rocket past the...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 26.99</span>
+                  <span class="line-through text-gray">$ 29.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo3.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">My Government...</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                In the city, Trey meets up with a cast of characters...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 25.89</span>
+                  <span class="line-through text-gray">$ 37.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo1.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">The Time Has Come</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                Lindbergh's Pharmacy is an Athens, Georgia, institution...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 27.89</span>
+                  <span class="line-through text-gray">$ 30.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-[76px]">
+        <h3 class="text-xl txt">Recommended for you</h3>
+        <div class="mt-5 p-2.5 overflow-scroll flex flex-row gap-10">
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo4.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">The Time Has Come</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                Lindbergh's Pharmacy is an Athens, Georgia, institution...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 27.89</span>
+                  <span class="line-through text-gray">$ 30.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo5.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">I Want a Better Catastrophe...</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                With global warming projected to rocket past the...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 26.99</span>
+                  <span class="line-through text-gray">$ 29.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo6.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">My Government...</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                In the city, Trey meets up with a cast of characters...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span class="whitespace-nowrap">$ 25.89</span>
+                  <span class="line-through text-gray whitespace-nowrap"
+                    >$ 37.99</span
+                  >
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 min-w-fit items-end p-3 hover:shadow-2xl hover:-translate-y-2 transition duration-200"
+          >
+            <img
+              class="w-[120px] md:w-fit"
+              src="assets/product_photo1.svg"
+              alt="book-img"
+            />
+            <div class="w-52">
+              <h5 class="md:mb-5 mb-1">The Time Has Come</h5>
+              <div class="font-desc md:mb-5 mb-1 text-sm text opacity-[.52]">
+                Lindbergh's Pharmacy is an Athens, Georgia, institution...
+              </div>
+              <div class="flex flex-col justify-between">
+                <div class="flex gap-4 md:mb-5 mb-1">
+                  <span>$ 27.89</span>
+                  <span class="line-through text-gray">$ 30.99</span>
+                </div>
+                <button
+                  class="flex gap-3 py-2 px-4 bg-primary items-center font-semibold text-white rounded-lg text-sm hover:-hue-rotate-15"
+                >
+                  <img width="20" src="assets/cart_icon.svg" alt="cart_icon" />
+                  <span>Add to Basket</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-[76px]">
+        <h3 class="text-xl txt">News</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-5 p-2.5 gap-10">
+          <div>
+            <div
+              class="flex md:flex-nowrap justify-center flex-wrap-reverse items-center gap-7"
+            >
+              <div>
+                <h5 class="mb-5 text-lg">The Books You Need to Read in 2023</h5>
+                <div class="bg-primary p-[1px] w-16 mb-5"></div>
+                <div class="text-sm font-desc">
+                  This is the blog we know you've all been waiting for. We
+                  present the top 10 titles for 2023 in fiction, non-fiction and
+                  children's books; a glorious mix of masterful storytelling,
+                  compelling subject matter and page-turning thrills...
+                </div>
+              </div>
+              <div class="shrink-0">
+                <img class="w-56 md:w-full" src="assets/news1.svg" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="flex md:flex-nowrap justify-center flex-wrap-reverse items-center gap-7"
+            >
+              <div>
+                <h5 class="mb-5 text-lg">February's Best Children's Books</h5>
+                <div class="bg-primary p-[1px] w-16 mb-5"></div>
+                <div class="text-sm font-desc">
+                  Some of the finest children's authors currently writing have
+                  books publishing this month, from Natasha Farrant to Elle
+                  McNicoll and from Tahereh Mafi to Harriet Muncaster. Across
+                  all areas and age ranges there are plenty of fantastic
+                  titles...
+                </div>
+              </div>
+              <div class="shrink-0">
+                <img class="w-56 md:w-full" src="assets/news2.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="border-t-[0.5px] border-gray-500 py-4 mt-5">
+        <ul class="flex flex-col md:flex-row justify-between md:items-center">
+          <div class="flex flex-col md:flex-row gap-4">
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>Sales and Refunds</li>
+            <li>Legal</li>
+          </div>
+          <div
+            class="flex gap-10 md:mt-0 mt-5 justify-center items-center md:justify-end"
+          >
+            <li>
+              <img src="assets/_instagram.svg" />
+            </li>
+            <li>
+              <img src="assets/_facebook.svg" />
+            </li>
+            <li>
+              <img src="assets/_google.svg" />
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
